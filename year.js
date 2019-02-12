@@ -1,4 +1,4 @@
-const year = '2017'
+const year = '2018'
 const start = new Date(`${year}/01/01`)
 let res = ''
 
