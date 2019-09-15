@@ -1,0 +1,24 @@
+{
+  "name": "@jigsaw/sb-scripts",
+  "version": "0.0.1",
+  "description": "Scrapbox scripts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/e-jigsaw/sb-scripts.git"
+  },
+  "keywords": [
+    "scrapbox"
+  ],
+  "author": "jigsaw <m@jgs.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/e-jigsaw/sb-scripts/issues"
+  },
+  "homepage": "https://github.com/e-jigsaw/sb-scripts#readme",
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0"
+  }
+}
