@@ -8,7 +8,7 @@ const main = d => {
   const next = new Date(d.getTime() + 86400000)
   const pm = d.getMonth()
   const cm = next.getMonth()
-  if (pm !== cm) res += `\n[********** ${cm + 1}]\n`
+  if (pm !== cm) res += `\n[*** [${year}${zpad(cm + 1)}]]\n`
   const cd = next.getDate()
   res += `#${year}${zpad(cm + 1)}${zpad(cd)}\n`
   const py = d.getYear()
