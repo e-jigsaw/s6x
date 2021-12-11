@@ -1,0 +1,19 @@
+scripts:
+  year:
+    cmd: year.ts
+    watch: false
+  syunen:
+    cmd: syunen.ts
+    watch: false
+  prepare:
+    cmd: prepare.ts
+    allow:
+        - write
+        - net
+    watch: false
+  dic:
+    cmd: dic.ts
+    allow:
+        - read
+        - write
+    watch: false
