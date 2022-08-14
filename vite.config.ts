@@ -6,20 +6,9 @@ const manifest = defineManifest({
   name: "sbs",
   version: "0.0.1",
   content_scripts: [
-    // {
-    //   matches: ["https://scrapbox.io/*"],
-    //   run_at: "document_end",
-    //   js: ["src/content.ts"],
-    // },
     {
-      matches: ["https://only-entry/*"],
+      matches: ["https://dummy/*"],
       js: ["src/inject.ts"],
-    },
-  ],
-  web_accessible_resources: [
-    {
-      resources: ["src/inject.ts.js"],
-      matches: ["<all_urls>"],
     },
   ],
 });
