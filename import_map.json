@@ -1,6 +1,13 @@
 {
   "imports": {
     "scrapbox": "https://raw.githubusercontent.com/scrapbox-jp/types/0.3.5/userscript.ts",
-    "scrapbox-std": "https://raw.githubusercontent.com/takker99/scrapbox-userscript-std/0.14.8/mod.ts"
+    "scrapbox-std": "https://raw.githubusercontent.com/takker99/scrapbox-userscript-std/0.14.8/mod.ts",
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/v91/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/v91/react-dom@18.2.0/",
+    "esbuild": "https://deno.land/x/esbuild@v0.15.1/mod.js",
+    "twind": "https://esm.sh/twind@0.16.17",
+    "react-use": "https://esm.sh/react-use@17.4.0"
   }
 }

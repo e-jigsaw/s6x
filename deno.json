@@ -4,7 +4,8 @@
     "syunen": "deno run syunen.ts",
     "prepare": "deno run --allow-write --allow-net prepare.ts",
     "dic": "deno run --allow-read --allow-write dic.ts",
-    "dev": "deno bundle src/inject.ts dist/out.js --watch"
+    "dev": "deno bundle src/inject.ts dist/out.js --watch",
+    "minify": "deno run --allow-read --allow-write --allow-env --allow-run minify.ts"
   },
   "importMap": "./import_map.json"
 }

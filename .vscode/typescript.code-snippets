@@ -1,0 +1,30 @@
+{
+  "Create new script": {
+    "scope": "typescript",
+    "prefix": "create",
+    "body": [
+      "import type { Scrapbox } from \"scrapbox\";",
+      "",
+      "declare const scrapbox: Scrapbox;",
+      "",
+      "const currentProject = scrapbox.Project.name;",
+      "scrapbox.on(\"project:changed\", () => {",
+      "  if (scrapbox.Project.name !== currentProject) cleanup();",
+      "  else setup();",
+      "});",
+      "",
+      "function setup() {",
+      "",
+      "}",
+      "function run() {",
+      "",
+      "}",
+      "function cleanup() {",
+      "",
+      "}",
+      "setup();",
+      ""
+    ],
+    "description": "Create new script"
+  }
+}
