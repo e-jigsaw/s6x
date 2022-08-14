@@ -4,11 +4,13 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.13",
     "@types/chrome": "^0.0.193",
+    "esbuild": "^0.15.2",
     "scrapbox-types": "^0.0.3",
     "typescript": "^4.7.4",
     "vite": "^3.0.7"
   },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "esbuild src/inject.ts --bundle --minify --target=chrome100 --outfile=dist/out.js"
   }
 }
