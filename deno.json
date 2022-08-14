@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "year": "deno run year.ts",
+    "syunen": "deno run syunen.ts",
+    "prepare": "deno run --allow-write --allow-net prepare.ts",
+    "dic": "deno run --allow-read --allow-write dic.ts",
+    "dev": "deno bundle src/inject.ts dist/out.js --watch"
+  },
+  "importMap": "./import_map.json"
+}

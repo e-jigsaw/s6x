@@ -1,7 +1,6 @@
-import type { EventEmitter } from "scrapbox-types/src/deps_2/deno.land/std@0.131.0/node/_events";
-import type { Scrapbox } from "scrapbox-types/types/userscript";
+import type { Scrapbox } from "scrapbox";
 
-declare const scrapbox: Scrapbox & EventEmitter;
+declare const scrapbox: Scrapbox;
 
 scrapbox.TimeStamp.addFormat("#YYYYMMDD");
 scrapbox.TimeStamp.addFormat("#MMDD");

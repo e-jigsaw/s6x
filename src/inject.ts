@@ -1,1 +1,1 @@
-import "./timestamp";
+import "./timestamp.ts";
