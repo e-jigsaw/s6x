@@ -11,12 +11,17 @@ const App: React.FC = () => {
   const [isOpen, toggle] = useToggle(false);
   const ref = useRef<HTMLInputElement>(null);
   const [value, setValue] = useState("");
-  useKey("Escape", () => {
-    if (isOpen) {
-      toggle(false);
-      takeCursor().focus();
-    }
-  });
+  useKey(
+    "Escape",
+    () => {
+      if (isOpen) {
+        toggle(false);
+        takeCursor().focus();
+      }
+    },
+    undefined,
+    [isOpen]
+  );
   useKey(
     (event) => event.key === "p" && event.metaKey,
     (event) => {
