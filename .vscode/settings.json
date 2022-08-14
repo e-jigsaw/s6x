@@ -1,12 +1,8 @@
 {
-  "deno.enable": true,
-  "deno.lint": true,
-  "deno.unstable": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
   },
-  "terminal.integrated.automationProfile.linux": {
-    "path": "/usr/bin/zsh"
-  },
-  "terminal.integrated.defaultProfile.linux": "zsh"
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
