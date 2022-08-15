@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "sbs",
+  "name": "s6x",
   "version": "0.0.1",
   "web_accessible_resources": [
     {
