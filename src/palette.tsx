@@ -50,7 +50,7 @@ const App: React.FC = () => {
   );
 };
 
-const ID = "__SBS_SLASH_ROOT";
+const ID = "__S6X_SLASH_ROOT";
 
 const currentProject = scrapbox.Project.name;
 scrapbox.on("project:changed", () => {
