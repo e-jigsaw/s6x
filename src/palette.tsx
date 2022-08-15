@@ -1,9 +1,10 @@
 import type { Scrapbox } from "scrapbox";
 import { takeCursor } from "scrapbox-std";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { createRoot } from "react-dom/client";
 import { tw } from "twind";
 import { useKey, useToggle } from "react-use";
+import { Events } from "./events.ts";
 
 declare const scrapbox: Scrapbox;
 
@@ -17,6 +18,8 @@ const App: React.FC = () => {
       if (isOpen) {
         toggle(false);
         takeCursor().focus();
+        setSelect(-1);
+        setValue("");
       }
     },
     undefined,
@@ -34,17 +37,58 @@ const App: React.FC = () => {
       }, 1);
     }
   );
+  const commands = useRef<Set<string>>(new Set());
+  useEffect(() => {
+    scrapbox.on(Events.Command.Register, (name) => {
+      commands.current.add(name);
+    });
+    scrapbox.emit(Events.Command.Wait);
+  }, []);
+  const candidates = useMemo(() => {
+    return [...commands.current.values()].filter(
+      (command) => command.indexOf(value) > -1
+    );
+  }, [isOpen, value]);
+  const [select, setSelect] = useState(-1);
   return (
     <div
-      className={tw`fixed top-0 z-[999999] w-full ${!isOpen ? "hidden" : ""}`}
+      className={tw`fixed top-4 z-[999999] w-full ${!isOpen ? "hidden" : ""}`}
     >
       <div className={tw`w-[40rem] mx-auto text-[30px]`}>
         <input
-          className={tw`p-2`}
+          className={tw`p-2 w-full`}
           ref={ref}
           value={value}
           onChange={(event) => setValue(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowDown") {
+              setSelect((st) => st + 1);
+            }
+            if (event.key === "ArrowUp") {
+              setSelect((st) => st - 1);
+            }
+            if (event.key === "Enter") {
+              event.preventDefault();
+              toggle(false);
+              takeCursor().focus();
+              scrapbox.emit(Events.Command.Run, candidates[select]);
+              setSelect(-1);
+              setValue("");
+            }
+          }}
         ></input>
+        <div className={tw`w-full bg-white text-[24px]`}>
+          {candidates.map((command, index) => (
+            <div
+              key={command}
+              className={tw`border-t-1 ${
+                select === index ? "bg-yellow-200" : ""
+              }`}
+            >
+              {command}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -8,6 +8,8 @@
     "react-dom/": "https://esm.sh/v91/react-dom@18.2.0/",
     "esbuild": "https://deno.land/x/esbuild@v0.15.1/mod.js",
     "twind": "https://esm.sh/twind@0.16.17",
-    "react-use": "https://esm.sh/react-use@17.4.0"
+    "react-use": "https://esm.sh/react-use@17.4.0",
+    "date-fns": "https://esm.sh/date-fns@2.29.1",
+    "date-fns/": "https://esm.sh/date-fns@2.29.1/"
   }
 }
