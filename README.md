@@ -1,1 +1,1 @@
-# sb-scripts
+# s6x
