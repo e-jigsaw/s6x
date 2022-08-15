@@ -18,7 +18,7 @@ const App: React.FC = () => {
       if (isOpen) {
         toggle(false);
         takeCursor().focus();
-        setSelect(-1);
+        setSelect(0);
         setValue("");
       }
     },
@@ -49,7 +49,7 @@ const App: React.FC = () => {
       (command) => command.indexOf(value) > -1
     );
   }, [isOpen, value]);
-  const [select, setSelect] = useState(-1);
+  const [select, setSelect] = useState(0);
   return (
     <div
       className={tw`fixed top-4 z-[999999] w-full ${!isOpen ? "hidden" : ""}`}
@@ -72,7 +72,7 @@ const App: React.FC = () => {
               toggle(false);
               takeCursor().focus();
               scrapbox.emit(Events.Command.Run, candidates[select]);
-              setSelect(-1);
+              setSelect(0);
               setValue("");
             }
           }}
