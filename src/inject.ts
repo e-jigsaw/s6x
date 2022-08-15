@@ -4,3 +4,4 @@ import "./palette.tsx";
 import "./streamInsert.ts";
 import "./today.ts";
 import "./yesterday.ts";
+import "./tomorrow.ts";
