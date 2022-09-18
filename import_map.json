@@ -10,6 +10,8 @@
     "twind": "https://esm.sh/twind@0.16.17",
     "react-use": "https://esm.sh/react-use@17.4.0",
     "date-fns": "https://esm.sh/date-fns@2.29.1",
-    "date-fns/": "https://esm.sh/date-fns@2.29.1/"
+    "date-fns/": "https://esm.sh/date-fns@2.29.1/",
+    "supabase": "https://esm.sh/@supabase/supabase-js@2.0.0-rc.10",
+    "dotenv": "https://deno.land/x/dotenv@v3.2.0/load.ts"
   }
 }
