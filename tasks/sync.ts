@@ -1,6 +1,7 @@
 import "dotenv";
 import { createClient } from "supabase";
 import { Database } from "../lib/database.types.ts";
+import pub from "./data/pub.json" assert { type: "json" };
 
 const supabase = createClient<Database>(
   Deno.env.get("SUPABASE_URL")!,
@@ -13,13 +14,9 @@ type RawPage = {
   created: number;
   updated: number;
 };
-const res = await fetch(
-  "https://raw.githubusercontent.com/e-jigsaw/s6x-data/main/data/pub.json",
-);
-const json = await res.json() as RawPage[];
 
 const { data, error } = await supabase.from("pages").upsert(
-  json.map(({ id, title, created, updated }) => ({
+  (pub as RawPage[]).map(({ id, title, created, updated }) => ({
     id,
     title,
     created: new Date(created * 1000),
