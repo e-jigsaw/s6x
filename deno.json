@@ -2,11 +2,11 @@
   "tasks": {
     "year": "deno run tasks/year.ts",
     "syunen": "deno run tasks/syunen.ts",
-    "prepare": "deno run --allow-write --allow-net tasks/prepare.ts -- --cwd=./tasks",
+    "fetch": "deno task --cwd tasks prepare",
     "dic": "deno run --allow-read --allow-write tasks/dic.ts",
     "dev": "deno bundle src/inject.ts dist/out.js --watch",
     "minify": "deno run --allow-read --allow-write --allow-env --allow-run tasks/minify.ts",
-    "sync": "deno run --allow-net --allow-read --allow-env tasks/sync.ts -- --cwd=./tasks"
+    "sync": "deno task --cwd tasks sync"
   },
   "importMap": "./import_map.json"
 }
