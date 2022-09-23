@@ -1,7 +1,8 @@
 {
   "tasks": {
     "prepare": "deno run --allow-write --allow-net --allow-read prepare.ts",
-    "sync": "deno run --allow-net --allow-read --allow-env sync.ts"
+    "sync": "deno run --allow-net --allow-read --allow-env sync.ts",
+    "fetch_pages": "deno run --allow-read --allow-net --allow-write fetch_pages.ts"
   },
   "importMap": "../import_map.json"
 }
