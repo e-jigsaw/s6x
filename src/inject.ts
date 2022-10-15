@@ -16,3 +16,6 @@ import "./tomorrow.ts";
 
 // UI
 import "./dailyNoteButton.ts";
+
+// block expand
+import "./blockExpand.ts";
