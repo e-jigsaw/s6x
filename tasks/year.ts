@@ -1,6 +1,6 @@
 import { zpad } from "./zpad.ts";
 
-const year = "2022";
+const year = "2023";
 const start = new Date(`${year}/01/01`);
 let res = "";
 
